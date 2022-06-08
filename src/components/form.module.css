@@ -1,0 +1,8 @@
+.col {
+  background-color: #03045e;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  max-width: 600px !important;
+  margin: 0 auto;
+}
