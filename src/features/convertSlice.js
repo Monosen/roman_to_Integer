@@ -49,12 +49,18 @@ export const convertSlice = createSlice({
     },
     decimalToRoman: (state, action) => {
       //validate input
+      if (!Number.isInteger(+action.payload)) {
+        state.error = true
+        return
+      }
+
       for (let i = 0; i < action.payload.length; i++) {
         if (+action.payload < 1 || +action.payload > 3999) {
           state.error = true
           return
         }
       }
+
       //
       state.error = false
 
